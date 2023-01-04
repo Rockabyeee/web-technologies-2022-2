@@ -47,6 +47,10 @@ body.lock {
     margin: 0 auto;
 }
 
+span.blue {
+    color: #306FF5;
+}
+
 /* header */
 .header {
     width: 100%;
@@ -200,4 +204,122 @@ body.lock {
 
 .footer__policy img {
     margin-right: 12px;
+}
+
+/* development */
+.development {
+    padding: 160px 0 270px;
+    overflow: hidden;
+}
+
+.development__body {
+    position: relative;
+}
+
+.development__image {
+    position: absolute;
+    z-index: -1;
+    transform: rotate(-12deg);
+}
+
+.development__image_1 {
+    top: -720px;
+    right: 110px;
+}
+
+.development__image_2 {
+    top: -765px;
+    right: -110px;
+}
+
+.development__content {
+    width: 100%;
+    max-width: 590px;
+}
+
+.development__title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 144%;
+    letter-spacing: 0.326451px;
+    color: #101828;
+    margin-bottom: 24px;
+}
+
+.development__text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 133%;
+    letter-spacing: -0.24px;
+    color: #101828;
+    margin-bottom: 64px;
+}
+
+.form-development {
+    background-color: #fff;
+    padding: 24px;
+    max-width: 676px;
+}
+
+.form-development__title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.38px;
+    color: #101828;
+    margin-bottom: 32px;
+}
+
+.form-development__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-development__item {
+    width: 100%;
+    max-width: 224px;
+    border-bottom: 1px solid #D0D5DD;
+}
+
+.form-development__label {
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: -0.078px;
+    color: #667085;
+    margin-bottom: 14px;
+}
+
+.form-development__phone-input,
+.form-development__name-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: -0.408px;
+    color: #101828;
+}
+
+.form-development__btn {
+    background: #2D66EE;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.154px;
+    color: #FFFFFF;
+    padding: 11px 24px;
+    width: 100%;
+    max-width: 132px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: .3s;
+}
+
+.form-development__btn:hover {
+    background: #2754bc;
 }
