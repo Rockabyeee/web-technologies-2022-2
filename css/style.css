@@ -71,6 +71,34 @@ span.blue {
     align-items: center;
 }
 
+.header__body>.header__burger {
+    display: none;
+}
+
+.header__body>.header__logo {
+    display: none;
+}
+
+.header__body>.header__contact {
+    display: none;
+}
+
+.header__menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header__menu > .header__close {
+    position: absolute;
+    display: none;
+    top: 50px;
+    right: 50px;
+    z-index: 5;
+}
+
 .header__logo {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -99,6 +127,7 @@ span.blue {
 
 .header__link:last-child {
     margin-right: 0;
+    margin-bottom: 0;
 }
 
 .header__contacts {
@@ -128,6 +157,101 @@ span.blue {
 
 .header__contact img {
     margin-right: 10px;
+}
+
+@media (max-width:992px) {
+    .header {
+        top: 16px;
+    }
+    .header__body>.header__burger {
+        display: block;
+    }
+    
+    .header__body>.header__logo {
+        display: block;
+    }
+    
+    .header__body>.header__contact {
+        display: block;
+    }
+    .header__menu {
+        background-color: #fff;
+        position: fixed;
+        bottom: calc(100% + 16px);
+        left: 0;
+        height: 850px;
+        width: 100vw;
+        overflow: auto;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 140px 20px;
+    }
+    .header__menu> .header__logo {
+        font-size: 48px;
+        margin-bottom: 52px;
+    }
+
+    .header__menu > .header__close {
+        display: block;
+    }
+
+    .header__nav {
+        flex-direction: column;
+        margin-bottom: 52px;
+    }
+
+    .header__link {
+        font-size: 36px;
+        margin-bottom: 32px;
+        margin-right: 0;
+    }
+
+    .header__contact {
+        font-size: 18px;
+    }
+}
+
+.header__menu.active {
+    top: -16px;
+}
+
+@media (max-width:576px) {
+    .header__body>.header__burger img{
+        width: 40px;
+        height: 20px;
+    }
+
+    .header__menu {
+        padding: 98px 20px;
+    }
+    
+    .header__body>.header__contact {
+        display: none;
+    }
+
+    .header__menu> .header__logo {
+        font-size: 20px;
+    }
+
+    .header__nav {
+        flex-direction: column;
+        margin-bottom: 52px;
+    }
+
+    .header__link {
+        font-size: 24px;
+    }
+
+    .header__contacts {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .header__contact {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
 
 /* footer */
