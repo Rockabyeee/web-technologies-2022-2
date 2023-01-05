@@ -651,6 +651,7 @@ span.blue {
     line-height: 129%;
     letter-spacing: -0.408px;
     color: #344054;
+    margin-top: 16px;
 }
 
 .cycle__list {
@@ -691,4 +692,44 @@ span.blue {
 
 .cycle__link img {
     margin-left: 20px;
+}
+
+@media (max-width:860px) {
+    .cycle {
+        padding: 32px 0;
+    }
+    
+    .cycle__body {
+        max-width: 700px;
+    }
+    
+    .cycle__content {
+        max-width: 320px;
+    }
+    
+    .cycle__title {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+    
+    .cycle__technologies {
+        font-size: 14px;
+        max-width: 224px;
+    }
+}
+
+@media (max-width:576px) {
+    .cycle {
+        padding: 32px 0 64px;
+    }
+    
+    .cycle__body {
+        max-width: unset;
+        flex-direction: column;
+    }
+    
+    .cycle__content {
+        max-width: unset;
+        margin-bottom: 32px;
+    }
 }
