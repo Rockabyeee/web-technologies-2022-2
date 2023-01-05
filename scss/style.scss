@@ -698,20 +698,20 @@ span.blue {
     .cycle {
         padding: 32px 0;
     }
-    
+
     .cycle__body {
         max-width: 700px;
     }
-    
+
     .cycle__content {
         max-width: 320px;
     }
-    
+
     .cycle__title {
         font-size: 28px;
         margin-bottom: 32px;
     }
-    
+
     .cycle__technologies {
         font-size: 14px;
         max-width: 224px;
@@ -722,14 +722,95 @@ span.blue {
     .cycle {
         padding: 32px 0 64px;
     }
-    
+
     .cycle__body {
         max-width: unset;
         flex-direction: column;
     }
-    
+
     .cycle__content {
         max-width: unset;
         margin-bottom: 32px;
+    }
+}
+
+// ---------------------------------------- developed ----------------------------------------
+.developed {
+    padding: 80px 0 120px;
+
+    @media (max-width:860px) {
+        padding: 45px 0;
+    }
+
+    @media (max-width:576px) {
+        padding: 30px 0;
+    }
+
+    &__body {}
+
+    &__title {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 144%;
+        letter-spacing: 0.326451px;
+        color: #101828;
+        max-width: 600px;
+        margin-bottom: 28px;
+
+        @media (max-width:860px) {
+            font-size: 28px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width:576px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: -15px;
+    }
+
+    &__item {
+        width: 33.333%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 15px;
+
+        @media (max-width:860px) {
+            width: 50%;
+        }
+    }
+
+    &__icon {
+        order: 1;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 16px;
+    }
+
+    &__text {
+        order: 2;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 129%;
+        letter-spacing: -0.408px;
+        color: #101828;
+
+        @media (max-width:576px) {
+            font-size: 14px;
+        }
     }
 }
