@@ -916,7 +916,6 @@ span.blue {
 
             &:last-child {
                 margin-right: 0;
-                margin-bottom: 0;
             }
 
             @media (max-width:992px) {
@@ -1133,6 +1132,11 @@ span.blue {
 
     &__app {
         margin-right: 16px;
+        transition: .3s;
+
+        &:hover {
+            opacity: 0.7;
+        }
 
         &:last-child {
             margin-right: 0;
@@ -1453,5 +1457,160 @@ span.blue {
         font-weight: 500;
         font-size: 15px;
         color: #667085;
+    }
+}
+
+// ---------------------------------------- book ----------------------------------------
+.book {
+    padding: 80px 0;
+    background: #2D66EE;
+
+    @media (max-width:600px) {
+        padding: 50px 0 56px;
+    }
+
+    &__body {
+        position: relative;
+    }
+
+    &__title {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 144%;
+        color: #FCFCFD;
+        margin-bottom: 40px;
+        max-width: 600px;
+
+        @media (max-width:860px) {
+            font-size: 28px;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width:600px) {
+            max-width: 350px;
+            margin: 0 auto 300px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        right: 128px;
+        top: -46px;
+
+        @media (max-width:1280px) {
+            right: 0;
+        }
+
+        @media (max-width:992px) {
+            transform: scale(0.75) translate(100px, 25px);
+        }
+
+        @media (max-width:600px) {
+            left: 50%;
+            transform: scale(0.55) translate(-90%, 25px);
+        }
+    }
+}
+
+.form-book {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 0px 24px rgba(0, 0, 0, 0.16);
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 600px;
+
+    @media (max-width:860px) {
+        max-width: 334px;
+    }
+
+    @media (max-width:600px) {
+        max-width: unset;
+    }
+
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+
+    &__input {
+        margin-bottom: 32px;
+    }
+
+    &__input {
+        width: 100%;
+        max-width: 264px;
+    }
+
+    &__input:nth-child(3) {
+        max-width: unset;
+    }
+
+    &__input-phone {
+        outline: none;
+        border: none;
+        border-bottom: 0.7px solid #D0D5DD;
+        width: 100%;
+        color: #101828;
+        font-weight: 400;
+        font-size: 17px;
+    }
+
+    &__input-name {
+        outline: none;
+        border: none;
+        border-bottom: 0.7px solid #D0D5DD;
+        width: 100%;
+        color: #101828;
+        font-weight: 400;
+        font-size: 17px;
+    }
+
+    &__input-email {
+        outline: none;
+        border: none;
+        border-bottom: 0.7px solid #D0D5DD;
+        width: 100%;
+        color: #101828;
+        font-weight: 400;
+        font-size: 17px;
+    }
+
+    &__label {
+        font-weight: 500;
+        font-size: 13px;
+        color: #667085;
+        margin-bottom: 8px;
+    }
+
+    &__btn {
+        margin-left: auto;
+        width: 100%;
+        background: #2D66EE;
+        border-radius: 8px;
+        max-width: 224px;
+        padding: 11px 0;
+        font-weight: 600;
+        font-size: 14px;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        transition: .3s;
+        cursor: pointer;
+
+        @media (max-width:860px) {
+            margin-left: unset;
+        }
+
+        &:hover {
+            background-color: #2754bc;
+        }
     }
 }
