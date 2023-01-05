@@ -407,20 +407,81 @@ span.blue {
     position: relative;
 }
 
-.development__image {
+.development__images {
+    display: flex;
     position: absolute;
+    top: -700px;
+    right: -340px;
     z-index: -1;
+    gap: 30px;
     transform: rotate(-12deg);
+    overflow: hidden;
 }
 
-.development__image_1 {
-    top: -720px;
-    right: 110px;
+@media (max-width:1140px) {
+    .development__images {
+        opacity: 0.6;
+    }
 }
 
-.development__image_2 {
-    top: -765px;
-    right: -110px;
+@media (max-width:860px) {
+    .development__images {
+        opacity: 1;
+        transform: scale(0.8) translateX(200px) rotate(-12deg);
+    }
+}
+
+@media (max-width:730px) {
+    .development__images {
+        opacity: 0.6;
+    }
+}
+
+@media (max-width:576px) {
+    .development__images {
+        opacity: 1;
+        transform: scale(0.6) translate(110px, 180px) rotate(-12deg);
+    }
+}
+
+.development__images::before {
+    content: '';
+    background-image: url(../img/development/01.webp);
+    background-repeat: repeat-y;
+    width: 390px;
+    height: 3960px;
+    overflow: hidden;
+    animation: move_up 60s infinite;
+}
+
+.development__images::after {
+    content: '';
+    background-image: url(../img/development/02.webp);
+    background-repeat: repeat-y;
+    width: 300px;
+    height: 3960px;
+    overflow: hidden;
+    animation: move_down 60s infinite;
+}
+
+@keyframes move_up {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-1960px);
+    }
+}
+
+@keyframes move_down {
+    0% {
+        transform: translateY(-1960px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .development__content {
@@ -472,7 +533,6 @@ span.blue {
 .form-development__item {
     width: 100%;
     max-width: 224px;
-    border-bottom: 1px solid #D0D5DD;
 }
 
 .form-development__label {
@@ -480,7 +540,7 @@ span.blue {
     font-size: 13px;
     letter-spacing: -0.078px;
     color: #667085;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
 }
 
 .form-development__phone-input,
@@ -492,6 +552,7 @@ span.blue {
     font-size: 17px;
     letter-spacing: -0.408px;
     color: #101828;
+    border-bottom: 1px solid #D0D5DD;
 }
 
 .form-development__btn {
@@ -518,20 +579,6 @@ span.blue {
 @media (max-width:860px) {
     .development {
         padding: 140px 0 32px;
-    }
-
-    .development__image {
-        transform: rotate(-12deg) scale(0.6);
-    }
-
-    .development__image_1 {
-        top: -625px;
-        right: -35px;
-    }
-
-    .development__image_2 {
-        top: -650px;
-        right: -125px;
     }
 
     .development__content {
@@ -581,20 +628,6 @@ span.blue {
 @media (max-width:576px) {
     .development {
         padding: 100px 0 32px;
-    }
-
-    .development__image {
-        transform: rotate(-12deg) scale(0.4);
-    }
-
-    .development__image_1 {
-        top: -380px;
-        right: -60px;
-    }
-
-    .development__image_2 {
-        top: -395px;
-        right: -100px;
     }
 
     .development__title {
@@ -934,11 +967,15 @@ span.blue {
         font-size: 17px;
         letter-spacing: -0.408px;
         color: #1D2939;
+        transition: .3s;
+
+        &:hover {
+            color: #101828;
+        }
 
         &.active {
             color: #101828;
             border-bottom: 2px solid #2D66EE;
-
         }
     }
 
@@ -1496,19 +1533,19 @@ span.blue {
     &__image {
         position: absolute;
         right: 128px;
-        top: -46px;
+        top: -64px;
 
         @media (max-width:1280px) {
             right: 0;
         }
 
         @media (max-width:992px) {
-            transform: scale(0.75) translate(100px, 25px);
+            transform: scale(0.75) translate(100px, 70px);
         }
 
         @media (max-width:600px) {
             left: 50%;
-            transform: scale(0.55) translate(-90%, 25px);
+            transform: scale(0.55) translate(-90%, 60px);
         }
     }
 }
@@ -1698,7 +1735,9 @@ span.blue {
         align-items: center;
 
         &.active {
-            background-color: transparent;
+            width: unset;
+            width: unset;
+            background-color: unset;
             box-shadow: unset;
         }
     }
