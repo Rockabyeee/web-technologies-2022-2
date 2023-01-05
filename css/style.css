@@ -416,8 +416,8 @@ span.blue {
   width: 390px;
   height: 3960px;
   overflow: hidden;
-  -webkit-animation: move_up 60s infinite;
-          animation: move_up 60s infinite;
+  -webkit-animation: move_up 120s infinite;
+          animation: move_up 120s infinite;
 }
 
 .development__images::after {
@@ -427,12 +427,18 @@ span.blue {
   width: 300px;
   height: 3960px;
   overflow: hidden;
-  -webkit-animation: move_down 60s infinite;
-          animation: move_down 60s infinite;
+  -webkit-animation: move_down 120s infinite;
+          animation: move_down 120s infinite;
 }
 
 @-webkit-keyframes move_up {
   0% {
+    transform: translateY(0px);
+  }
+  33% {
+    transform: translateY(-1960px);
+  }
+  66% {
     transform: translateY(0px);
   }
   100% {
@@ -444,6 +450,12 @@ span.blue {
   0% {
     transform: translateY(0px);
   }
+  33% {
+    transform: translateY(-1960px);
+  }
+  66% {
+    transform: translateY(0px);
+  }
   100% {
     transform: translateY(-1960px);
   }
@@ -452,12 +464,24 @@ span.blue {
   0% {
     transform: translateY(-1960px);
   }
+  33% {
+    transform: translateY(0px);
+  }
+  66% {
+    transform: translateY(-1960px);
+  }
   100% {
     transform: translateY(0px);
   }
 }
 @keyframes move_down {
   0% {
+    transform: translateY(-1960px);
+  }
+  33% {
+    transform: translateY(0px);
+  }
+  66% {
     transform: translateY(-1960px);
   }
   100% {
