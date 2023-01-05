@@ -91,7 +91,7 @@ span.blue {
     position: relative;
 }
 
-.header__menu > .header__close {
+.header__menu>.header__close {
     position: absolute;
     display: none;
     top: 50px;
@@ -163,17 +163,19 @@ span.blue {
     .header {
         top: 16px;
     }
+
     .header__body>.header__burger {
         display: block;
     }
-    
+
     .header__body>.header__logo {
         display: block;
     }
-    
+
     .header__body>.header__contact {
         display: block;
     }
+
     .header__menu {
         background-color: #fff;
         position: fixed;
@@ -186,12 +188,13 @@ span.blue {
         padding: 140px 20px;
         transition: .3s;
     }
-    .header__menu> .header__logo {
+
+    .header__menu>.header__logo {
         font-size: 48px;
         margin-bottom: 52px;
     }
 
-    .header__menu > .header__close {
+    .header__menu>.header__close {
         display: block;
     }
 
@@ -216,7 +219,7 @@ span.blue {
 }
 
 @media (max-width:576px) {
-    .header__body>.header__burger img{
+    .header__body>.header__burger img {
         width: 40px;
         height: 20px;
     }
@@ -224,12 +227,12 @@ span.blue {
     .header__menu {
         padding: 98px 20px;
     }
-    
+
     .header__body>.header__contact {
         display: none;
     }
 
-    .header__menu> .header__logo {
+    .header__menu>.header__logo {
         font-size: 20px;
     }
 
@@ -311,6 +314,7 @@ span.blue {
         margin: 52px 0;
         gap: 32px;
     }
+
     .footer__column {
         width: calc(50% - 16px);
     }
@@ -495,6 +499,107 @@ span.blue {
 
 .form-development__btn:hover {
     background: #2754bc;
+}
+
+@media (max-width:860px) {
+    .development {
+        padding: 140px 0 32px;
+    }
+
+    .development__image {
+        transform: rotate(-12deg) scale(0.6);
+    }
+
+    .development__image_1 {
+        top: -625px;
+        right: -35px;
+    }
+
+    .development__image_2 {
+        top: -650px;
+        right: -125px;
+    }
+
+    .development__content {
+        max-width: 390px;
+    }
+
+    .development__title {
+        font-size: 28px;
+    }
+
+    .development__text {
+        margin-bottom: 32px;
+    }
+
+    .form-development {
+        padding: 32px;
+        max-width: 380px;
+    }
+
+    .form-development__title {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .form-development__items {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .form-development__item {
+        margin-bottom: 32px;
+    }
+
+    .form-development__item:last-child {
+        margin-bottom: 0;
+    }
+
+    .form-development__label {
+        margin-bottom: 8px;
+    }
+
+    .form-development__btn {
+        max-width: 160px;
+    }
+}
+
+@media (max-width:576px) {
+    .development {
+        padding: 100px 0 32px;
+    }
+
+    .development__image {
+        transform: rotate(-12deg) scale(0.4);
+    }
+
+    .development__image_1 {
+        top: -380px;
+        right: -60px;
+    }
+
+    .development__image_2 {
+        top: -395px;
+        right: -100px;
+    }
+
+    .development__title {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .development__text {
+        font-size: 15px;
+        margin-bottom: 536px;
+    }
+
+    .form-development__label {
+        margin-bottom: 8px;
+    }
+
+    .form-development__btn {
+        max-width: 160px;
+    }
 }
 
 /* cycle */
