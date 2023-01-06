@@ -46,7 +46,7 @@ function init() {
                         ]
                     }
                 ]
-            },{
+            }, {
                 name: 'Фильтры',
                 hasChildren: true,
                 items: [
@@ -74,51 +74,83 @@ function init() {
 
     const items = new ListItems(document.getElementById('list-items'), data)
 
-
-  /*  items.render()*/
-    items.init()
-
-    /*console.log(items.renderTest(data));*/
+    items.render();
+    items.init();
 
     function ListItems(el, data) {
         this.el = el;
         this.data = data;
 
         this.init = function () {
-            const parents = this.el.querySelectorAll('[data-parent]')
+            const parents = this.el.querySelectorAll('[data-parent]');
 
             parents.forEach(parent => {
-                const open = parent.querySelector('[data-open]')
+                const open = parent.querySelector('[data-open]');
 
-                open.addEventListener('click', () => this.toggleItems(parent) )
+                open.addEventListener('click', () => this.toggleItems(parent));
             })
         }
 
         this.render = function () {
-            this.el.insertAdjacentHTML('beforeend', this.renderParent(this.data))
+            this.el.insertAdjacentHTML('beforeend', this.renderParent(this.data));
         }
 
         this.renderParent = function (data) {
-            //проверка всех элементов на hasChildren
-            //если hasChildren, то запускаем renderParent
-            //если !hasChildren, то запускаем renderChildren
-            //возвращает рендер родительского элемента
+            let result = '';
 
+            result += '<div class="list-item list-item_open" data-parent>';
+            result += this.renderElement(data);
+            result += '<div class="list-item__items">';
+
+            for (let item of data.items) {
+                if (item.hasChildren) {
+                    result += this.renderParent(item);
+                }
+                else {
+                    result += this.renderChildren(data);
+                }
+            }
+
+            result += '</div>';
+            result += '</div>';
+
+            return result;
         }
 
         this.renderChildren = function (data) {
-            //вовзращает рендер элемента без вложенности
+            let result = '';
+
+            result += '<div class="list-item__inner">';
+            result += '<div class="list-item__space">';
+            result += '</div>';
+            result += '<img class="list-item__folder" src="img/folder.png" alt="folder">';
+            result += `<span>${data.name}</span>`;
+            result += '</div>';
+
+            return result;
+        }
+
+        this.renderElement = function (data) {
+            let result = '';
+
+            result += '<div class="list-item__inner">'
+            result += '<img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>';
+            result += '<img class="list-item__folder" src="img/folder.png" alt="folder">';
+            result += `<span>${data.name}</span>`;
+            result += '</div>';
+
+            return result;
         }
 
         this.toggleItems = function (parent) {
-            parent.classList.toggle('list-item_open')
+            parent.classList.toggle('list-item_open');;
         }
 
-/*        this.renderTest = function (data) {
-            return `
-            <div class="test">${data.name}</div>
-            `
-        }*/
+        /*        this.renderTest = function (data) {
+                    return `
+                    <div class="test">${data.name}</div>
+                    `
+                }*/
     }
 
 }
