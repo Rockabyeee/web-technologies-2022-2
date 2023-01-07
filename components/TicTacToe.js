@@ -132,7 +132,7 @@ export const TicTacToe = {
 
     this.boxes.forEach(box => {
       this.setBlockDom(box, true);
-      this.setBlockValue(box,true);
+      this.setBlockValue(box, true);
     })
   },
 
@@ -186,13 +186,14 @@ export const TicTacToe = {
    * @returns {string} Текущий ход 'X' или 'O'
    */
   getCurrentTurnValue() {
-    return this.isXTurn ? 'X' : 'Y';
+    return this.isXTurn ? 'X' : 'O';
   },
 
   /**
    * Изменение текущего хода в данных
    */
   changeTurnValue() {
+    this.isXTurn = this.isXTurn ? false : true;
   },
 
   /**
