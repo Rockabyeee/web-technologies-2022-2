@@ -165,6 +165,7 @@ export const TicTacToe = {
    * @returns {string} Текущий ход 'X' или 'O'
    */
   getCurrentTurnValue() {
+    return this.isXTurn? 'X' : 'Y';
   },
 
   /**
