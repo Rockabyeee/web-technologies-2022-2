@@ -126,6 +126,14 @@ export const TicTacToe = {
    * Сброс данных и очищение дом дерева
    */
   restartGame() {
+    this.isGameEnd = false;
+    this.isXTurn = true;
+    this.onMove(this.isXTurn);
+
+    this.boxes.forEach(box => {
+      this.setBlockDom(box, true);
+      this.setBlockValue(box,true);
+    })
   },
 
   /**
